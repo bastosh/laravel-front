@@ -2,7 +2,7 @@
 
 ## Installation des dépendances
 ```
-npm rm bootstrap && npm i -D gulp bootstrap rfs style-sherpa
+npm rm bootstrap && npm i -D gulp bootstrap rfs style-sherpa laravel-mix-purgecss
 ```
 
 ## Copie des dossiers dans resources/ et du gulpfile à la racine
