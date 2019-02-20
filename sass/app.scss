@@ -1,6 +1,6 @@
-@import '../../../node_modules/rfs/scss';
+@import '~rfs/scss';
 @import 'themes/default';
-@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
 @import 'utilities/borders';
 @import 'utilities/buttons';
@@ -11,8 +11,3 @@
 @import 'components/all';
 
 @import 'style';
-
-
-
-
-
