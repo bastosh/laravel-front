@@ -1,0 +1,21 @@
+/*----------------------------------------------------------------------
+  STYLE FOR YOUR PROJECT HERE
+
+  You can write your styles here or create and import as many partials
+  as you want to organize your code.
+------------------------------------------------------------------------*/
+
+.demo-title {
+    @include font-size(5rem); // OR @include responsive-font-size(80px); OR @include rfs(80);
+    font-weight: lighter;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// You can use responsive-font-size to manage typography ratios
+//h1 { @include rfs(40); }
+//h2 { @include rfs(32); }
+//h3 { @include rfs(28); }
+//h4 { @include rfs(24); }

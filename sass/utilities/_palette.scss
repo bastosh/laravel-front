@@ -1,0 +1,62 @@
+$lightest-percentage:              40 !default;
+$lighter-percentage:               30 !default;
+$light-percentage:                 20 !default;
+$dark-percentage:                  10 !default;
+$darker-percentage:                15 !default;
+$darkest-percentage:               20 !default;
+
+$primary-lightest-percentage:      $lightest-percentage !default;
+$primary-lighter-percentage:       $lighter-percentage !default;
+$primary-light-percentage:         $light-percentage !default;
+$primary-dark-percentage:          $dark-percentage !default;
+$primary-darker-percentage:        $darker-percentage !default;
+$primary-darkest-percentage:       $darkest-percentage !default;
+
+$secondary-lightest-percentage:    $lightest-percentage !default;
+$secondary-lighter-percentage:     $lighter-percentage !default;
+$secondary-light-percentage:       $light-percentage !default;
+$secondary-dark-percentage:        $dark-percentage !default;
+$secondary-darker-percentage:      $darker-percentage !default;
+$secondary-darkest-percentage:     $darkest-percentage !default;
+
+$palette: ();
+$palette: map-merge(
+  (
+      "primary-lightest":     lighten($primary, $primary-lightest-percentage),
+      "primary-lighter":      lighten($primary, $primary-lighter-percentage),
+      "primary-light":        lighten($primary, $primary-light-percentage),
+      "primary-dark":         darken($primary, $primary-dark-percentage),
+      "primary-darker":       darken($primary, $primary-darker-percentage),
+      "primary-darkest":      darken($primary, $primary-darkest-percentage),
+      "secondary-lightest":   lighten($secondary, $secondary-lightest-percentage),
+      "secondary-lighter":    lighten($secondary, $secondary-lighter-percentage),
+      "secondary-light":      lighten($secondary, $secondary-light-percentage),
+      "secondary-dark":       darken($secondary, $secondary-dark-percentage),
+      "secondary-darker":     darken($secondary, $secondary-darker-percentage),
+      "secondary-darkest":    darken($secondary, $secondary-darkest-percentage),
+  ),
+  $palette
+);
+
+@each $color, $value in $palette {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $grays {
+  .bg-gray-#{$color} {
+    background-color: #{$value} !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}-lightest", lighten($value, $lightest-percentage));
+  @include bg-variant(".bg-#{$color}-lighter", lighten($value, $lighter-percentage));
+  @include bg-variant(".bg-#{$color}-light", lighten($value, $light-percentage));
+  @include bg-variant(".bg-#{$color}-dark", darken($value, $dark-percentage));
+  @include bg-variant(".bg-#{$color}-darker", darken($value, $darker-percentage));
+  @include bg-variant(".bg-#{$color}-darkest", darken($value, $darkest-percentage));
+}
+
+

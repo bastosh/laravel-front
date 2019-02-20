@@ -1,0 +1,69 @@
+@extends('layouts.style')
+
+@section('content')
+
+<header class="bg-primary text-white py-5">
+  <div class="container">
+    <h1 class="mb-0">Style Guide</h1>
+    <p class="lead mb-0 text-primary-lighter">This style guide was built with Bootstrap 4.3.1.</p>
+  </div>
+</header>
+
+<div class="container mb-5">
+
+  <div class="row pt-5">
+
+    <aside class="col-md-3 col-lg-2">
+      <ul class="nav flex-md-column sticky pb-4">
+
+        {{#each pages}}
+        <li class="nav-item"><a class="nav-link pl-0" href="#{{ anchor }}">{{ title }}</a></li>
+        {{/each}}
+
+      </ul>
+    </aside>
+
+    <main class="col-md-9 col-lg-10">
+      {{#each pages}}
+      <section class="ss-section" id="{{ anchor }}">
+        {{ body }}
+      </section>
+      {{/each}}
+    </main>
+
+  </div>
+
+</div>
+
+<section class="section bg-light">
+  <div class="container">
+    <h1 class="title">Section</h1>
+    <h2 class="subtitle">
+      A simple container to divide your page into <strong>sections</strong>.
+    </h2>
+  </div>
+</section>
+
+<section class="section is-medium">
+  <div class="container">
+    <h1 class="title">Section</h1>
+    <h2 class="subtitle">
+      A simple container to divide your page into <strong>sections</strong>.
+    </h2>
+  </div>
+</section>
+
+<section class="section bg-primary text-white is-large">
+  <div class="container">
+    <h1 class="display-4 title">Section</h1>
+    <h2 class="h1 subtitle">
+      A simple container to divide your page into <strong>sections</strong>.
+    </h2>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-5">
+  © 2019 • Subvitamine
+</footer>
+
+@endsection

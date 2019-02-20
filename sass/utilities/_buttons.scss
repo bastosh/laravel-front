@@ -1,0 +1,17 @@
+$btn-rounded-sm-padding-x: 1.25rem !default;
+$btn-rounded-padding-x: 2rem !default;
+$btn-rounded-lg-padding-x: 2.5rem !default;
+
+.btn-rounded {
+  border-radius: $rounded-pill;
+  padding-left: $btn-rounded-padding-x;
+  padding-right: $btn-rounded-padding-x;
+  &.btn-sm {
+    padding-left: $btn-rounded-sm-padding-x;
+    padding-right: $btn-rounded-sm-padding-x;
+  }
+  &.btn-lg {
+    padding-left: $btn-rounded-lg-padding-x;
+    padding-right: $btn-rounded-lg-padding-x;
+  }
+}

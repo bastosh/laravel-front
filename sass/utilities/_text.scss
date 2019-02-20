@@ -1,0 +1,8 @@
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}-lightest", lighten($value, $lightest-percentage));
+  @include text-emphasis-variant(".text-#{$color}-lighter", lighten($value, $lighter-percentage));
+  @include text-emphasis-variant(".text-#{$color}-light", lighten($value, $light-percentage));
+  @include text-emphasis-variant(".text-#{$color}-dark", darken($value, $dark-percentage));
+  @include text-emphasis-variant(".text-#{$color}-darker", darken($value, $darker-percentage));
+  @include text-emphasis-variant(".text-#{$color}-darkest", darken($value, $darkest-percentage));
+}

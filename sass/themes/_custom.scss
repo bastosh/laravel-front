@@ -1,0 +1,42 @@
+/*-----------------------------------------
+           BOOTSTRAP OVERRIDES
+------------------------------------------- */
+
+$primary:       #0F63D2;
+$secondary:     #D62273;
+$info:          #03A9F4;
+$success:       #8BC34A;
+$warning:       #FF9800;
+
+$yiq-contrasted-threshold: 167;
+
+$border-radius:                 0; //.25rem;
+$border-radius-lg:              0; //.3rem;
+$border-radius-sm:              0; //.2rem;
+// Remove border radius on select input in Chrome
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  background-image: url("https://image.flaticon.com/icons/svg/60/60781.svg");
+  background-position: 95% 54%;
+  background-repeat: no-repeat;
+  background-size: 14px;
+}
+
+$close-font-weight:       300;
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 3)
+),
+  $spacers
+);
